@@ -23,8 +23,8 @@
     --space-3xl:48px;
 
     /* border color */
-    --border-pri-color:rgb(228, 221, 221);
-    --border-sec-color:rgb(220, 10, 10);
+    --border-pri-color:rgb(8, 57, 181);
+    --border-sec-color:rgb(21, 162, 124);
 
 
     /* border radius */
@@ -91,7 +91,8 @@ section .infos{
     
 }
 .fill{
-    background-color: var(--sec);
+    /* background-color: var(--sec); */
+    background-color: rgb(225, 255, 0);
 
 }
 .food{
@@ -102,7 +103,7 @@ section .infos{
     width:100vw;
     position: fixed;
     top:0;
-    background-color: #b616e6;
+    background-color: #076be6;
     /* backdrop-filter: blur(0.1px); */
     display:flex;
     justify-content: center;
@@ -115,8 +116,14 @@ section .infos{
     align-items: center;
     gap:var(--space-lg);
 }
+.modal .start-game h3,
+.modal .game-over h3{
+    font-size: 3rem;
+    font-weight: 700;
+}
 .btn{
-    padding:var(--space-sm) var(--space-md);
+    padding:var(--space-sm) var(--space-md);    
+    font-size: 1.4rem;
     border:none;
     border-radius: var(--bor-radius-sm);
     cursor: pointer;
@@ -127,4 +134,17 @@ section .infos{
 }
 .modal .game-over{
     display:none;
+}
+.bonus-food{
+    background-color: rgb(5, 143, 229);
+    animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
 }
